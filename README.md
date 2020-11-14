@@ -15,5 +15,6 @@ Se nos abrirá el fichero en un editor de texto. Tenemos que añadir los usuario
 #includedir /etc/sudoers.d
 
 #Usuario actual
+
 root ALL=(ALL:ALL) ALL
 senaite ALL=(ALL:ALL) ALL
