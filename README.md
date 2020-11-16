@@ -6,4 +6,4 @@ En este documento se detallan los pasos seguidos durante la realización del Tra
 - Installation.md: proporciona información para la instalación de Senaite LIMS configurado para este proyecto.
 - Configuration.md: resumen sobre las configuraciones y cambios llevados a cabo sobre el software durante el proyecto.
 - UserManual.md: se detallan los pasos para realizar un flujo de trabajo en Senaite LIMS.
-- FinalReport.md: memoria final del TFM.
+- FinalReport.docx: memoria final del TFM.
