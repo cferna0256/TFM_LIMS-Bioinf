@@ -24,7 +24,7 @@ senaite ALL=(ALL:ALL) ALL
 ------------------------------
 
 ## Instalar copia de máquina virtual
-Para agilizar el proceso de instalación, se aporta una copia del sistema operativo Ubuntu con la instalación Senaite ya realizada. Tan solo hay que instalarla en una máquina virtual oracle mediante el menú "Archivo / Importar servicio virtualizado". Una vez instalada, ejecutarla e iniciar sesión mediante usuario "senaite" y contraseña "admin". Una vez dentro, abrir la terminal ejecutar los siguientes comandos:
+Para agilizar el proceso de instalación, se aporta una copia del sistema operativo Ubuntu con la instalación Senaite ya realizada. Tan solo hay que instalarla en una máquina virtual Oracle mediante el menú "Archivo / Importar servicio virtualizado". Una vez instalada, ejecutarla e iniciar sesión mediante usuario "senaite" y contraseña "admin". Una vez dentro, abrir la terminal ejecutar los siguientes comandos:
 
 --------------------------------------
 $ conda activate senaite
@@ -82,7 +82,7 @@ Se configuran los Perfiles de Análisis, para que aparezcan por defecto los serv
 ### Lotes analíticos
 Los lotes anaíticos permiten registrar varias muestras a la vez e identificarlas como un conjunto. Configuramos las etiquetas para "Standard Sequencing".
 
-###
+
 
 
 
