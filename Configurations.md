@@ -42,7 +42,14 @@ Se configuran los Perfiles de Análisis, para que aparezcan por defecto los serv
 ### Lotes analíticos
 Los lotes anaíticos permiten registrar varias muestras a la vez e identificarlas como un conjunto. Configuramos las etiquetas para "Standard Sequencing".
 
+### Configuraciones generales (SetUp)
 
+Senaite permite una serie de configuraciones generales. En nuestro caso, modificamos las siguientes:
+- Accounting -> Include and display pricing information = False
+- Samples -> Auto-receive samples = True
+- Analysis -> Categorise analysis services = True
+            -> Default count of Sample to add = 1
+- Id Server -> Modificamos el campo Sample ID = {clientId}-{sampleType}-{yymmdd}
 
 
 
