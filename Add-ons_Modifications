@@ -1,0 +1,27 @@
+# Modificaciones realizadas en código
+
+Para adaptar el software a los requerimientos del flujo de trabajo de un servicio de secuenciación, se desarrolla un add-on con ciertas modificaciones en el código.
+
+Se toma como referencia el add-on estándar llamado senaite.core. De él se toman los siguientes ficheros:
+
+## Relación de modificaciones:
+Modificado analysisrequest.py:
+- Cambio en línea 47 -> "from bika.lims.browser.widget import SequenceSizeSelectionWidget"
+- Cambio en línea 95 -> "from bika.lims.permissions import FieldEditSequenceSize"
+- Cambio en línea 378 -> "required = True" .
+- Cambio en línea 553 -> "label = 'Primers'" 
+- Añadimos un nuevo campo llamado "Sequence size"
+
+Modificado config.py:
+- Añadimos una lista en la línea 168 llamada SEQUENCE_SIZE para que aparezcan los campos que necesitamos en un desplegable.
+
+Creado sequencesizeselectionwidget.py, a imagen y semejanza de priorityselectionwidget.py
+
+Modificado permissions.py
+- Añadimos en línea 159 -> FieldEditSequenceSize 
+
+
+
+
+
+
