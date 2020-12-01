@@ -45,6 +45,8 @@ Los lotes anaíticos permiten registrar varias muestras a la vez e identificarla
 ### Configuraciones generales (SetUp)
 
 Senaite permite una serie de configuraciones generales. En nuestro caso, modificamos las siguientes:
+- Security -> Allow access to worksheets only to assigned anaysts = False
+            -> Only lab managers can create and manage worksheets = False
 - Accounting -> Include and display pricing information = False
 - Samples -> Auto-receive samples = True
 - Analysis -> Categorise analysis services = True
