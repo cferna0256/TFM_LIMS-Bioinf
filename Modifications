@@ -1,12 +1,11 @@
 # Modificaciones realizadas en código
 
 ## Modificaciones realizadas en senaite.core:
-Para adaptar el software a los requerimientos del flujo de trabajo de un servicio de secuenciación es necesario modificar y añadir algunos de los campos que aparecen en el registro de muestras (Analysis Request). Para ello, se modifica el add-on estándar llamado senaite.core. 
-De él, modificamos el fichero analysisrequest.py:
+Para adaptar el software a los requerimientos del flujo de trabajo de un servicio de secuenciación es necesario modificar y añadir algunos de los campos que aparecen en el registro de muestras (Analysis Request). Para ello, se modifica el add-on estándar llamado senaite.core, concretamente, el fichero "analysisrequest.py":
 
-- Cambio en línea 340 -> "label = 'Primers'" para utilizar la tabla "AnalysisRequestSubGroup" para indicar el tipo de organismo al que pertenece la muestra.
+- Cambio en línea 340 -> "label = 'Primers'" para indicar el tipo de organismo al que pertenece la muestra, usando los registros de la tabla "AnalysisRequestSubGroup" .
 - Cambio en línea 370 -> "required = 1" para hacer el campo "Template" obligatorio.
-- Cambio en línea 553 -> "label = 'Primers'" para utilizar la tabla "Sample Condition" para indicar el tipo de Primers a utilizar.
+- Cambio en línea 553 -> "label = 'Primers'" para indicar el tipo de Primers a utilizar, usando los registros de la tabla "Sample Condition".
 - Cambio en línea 700 -> "required = 1" para hacer el campo "Specifications" obligatorio.
 
 ## Modificaciones realizadas en senaite.impress:
