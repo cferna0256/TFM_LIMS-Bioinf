@@ -1,5 +1,5 @@
 ## Configuraciones realizadas
-Se ha configurado un ejemplo sencillo de un servicio de secuenciación. Este servicio ofrecerá secuenciación unidireccional o bidireccional y, dependiendo del tipo de muestra, habrá que realizar una extracción previa de material genético y/o una PCR previas a la secuenciación.
+Se ha configurado un ejemplo sencillo de un servicio de secuenciación. Este servicio ofrecerá secuenciación estándar de tipo Sanger y, dependiendo del tipo de muestra, habrá que realizar una extracción previa de material genético y/o una PCR previas a la secuenciación.
 
 ### Usuarios y permisos
 Para acceder al sistema se han configurado tres usuarios, además del rol de admin:
@@ -11,36 +11,82 @@ Para acceder al sistema se han configurado tres usuarios, además del rol de adm
 Todos ellos pertenecen al mismo laboratorio: Sequencing Service.
 
 ### Clientes
-Con el objetivo de identificar las muestras y los análisis realizados en cada una de ellas, se dan de alta clientes "ficticios": North Hospital, Public Health Institute y FernaLabs.
+Con el objetivo de identificar las muestras y los análisis realizados en cada una de ellas, se dan de alta clientes "ficticios": North Hospital y Public Health Institute.
 
-### Muestras
-Para el registro de muestras, se configuran los campos de la plantilla de registro, dejando solo los necesarios. También se crean los siguientes Tipos de Muestreo: PCR Product, Plasmid, Tissue, DNA. Además, modificamos el identificador de muestra (ID) para que aparezcan la fecha de registro de la muestra y el cliente.
+### Análisis.
+Los análisis se deben configurar a través de las siguientes tablas:
+- Analysis Categories.
+- Analysis Services.
 
-### Análisis
 Se dan de alta las siguientes categorías de análisis:
 - Pre-Sequencing
 - Standard Sequencing
 
 Dentro de "Pre-sequencing" se configuran los siguientes servicios de análisis:
-- DNA extraction (A260/A280) - unidades nm ratio
-- PCR - unidades pb
+- DNA extraction (A260/A280) (nm ratio)
+- PCR (pb)
 
 Dentro de "Standard Sequencing" se configuran los siguientes análisis:
 - Forward - GC content (%)
 - Forward - Length (pb)
-- Forward - Fasta File (-)
+- Forward - Chromatogram (-)
+- Forward - Sequence (-)
 - Reverse - GC content (%)
 - Reverse - Length (pb)
-- Reverse - Fasta File (-)
+- Reverse - Chromatogram (-)
+- Reverse - Sequence (-)
 
-Se configuran los Perfiles de Análisis, para que aparezcan por defecto los servicios anteriores a la hora de registrar muestras:
-- DNA Extraction: incluye el servicio DNA extraction.
-- PCR: incluye el servicio PCR
-- Bidirectional Sequencing: incluye los servicios de Forward - X y Reverse-X.
-- Unidirectional Sequencing: incluye los servicios Reverse-X.
+Se configuran las plantillas de Análisis, para que aparezcan por defecto los servicios anteriores a la hora de registrar muestras de cada tipo:
+- Tissue-Sequencing: incluye los servicios pertenecientes a Pre-Sequencing y a "Standard Sequencing".
+- DNA-Sequencing: incluye los servicios "DNA extraction" y los pertenecientes a "Standard Sequencing".
+- PCR Product-Sequencing: incluye los servicios pertenecientes a "Standard Sequencing".
 
-### Lotes analíticos
-Los lotes anaíticos permiten registrar varias muestras a la vez e identificarlas como un conjunto. Configuramos las etiquetas para "Standard Sequencing".
+### Muestras.
+
+Las muestras son los objetos básicos para LIMS, mediante los cuales vamos a poder obtener información de los resultados. En Senaite, se llaman Analysis Request (petición de análisis). Para configurar las muestras primero hay que configurar las siguientes tablas:
+- Sample Type.
+- Sample/Analysis Template.
+
+Además, también utilizamos la información aportada por los clientes, los usuarios y los análisis, aparte de las siguientes tablas para añadir mayor información a la muestra:
+- Container. 
+- Sub-Group -> le cambiamos el nombre a "Organism".
+- Sample Condition -> le cambiamos el nombre a "Primers".
+
+Para el registro de muestras, se configuran los campos de la plantilla de registro, dejando solo los necesarios. Añadimos también dos campos llamados "Organism" y "Primers".
+
+También se crean los siguientes Tipos de Muestreo: PCR Product, Tissue, DNA. Además, modificamos el identificador de muestra (ID) para que aparezcan la fecha de registro de la muestra y el cliente.
+
+### Especificaciones de análisis
+Para configurar las especificaciones de análisis tenemos que tener previamente configurados los análisis y las muestras.
+
+### Instrumentos
+
+Para dar de alta instrumentos tenemos que configurar las siguientes tablas:
+- Instrument Types
+- Manufacturers
+- Methods
+- Instruments
+
+Se configuran los siguientes tipos de instrumentos (Instrument Types):
+- Thermo Cycler.
+- Sequencing Instruments.
+- DNA Extraction.
+
+Configuramos los siguientes fabricantes (Manufacturers):
+- Agilent Technologies.
+- Thermo Fischer Scientific.
+- Fluidigm.
+
+Configuramos los siguientes métodos:
+- Spectrophotometry.
+- Standard PCR.
+- Standard Sanger Sequencing.
+
+Configuramos los siguientes instrumentos:
+- 2100 Bioanalyzer -> para DNA Extraction.
+- 3500 Genetic Analyzer -> para Standard Sequencing.
+- Biomark HD System -> para PCR.
+
 
 ### Configuraciones generales (SetUp)
 
