@@ -100,6 +100,16 @@ Senaite permite una serie de configuraciones generales. En nuestro caso, modific
 - Id Server -> Modificamos el campo Sample ID = {clientId}-{sampleType}-{yymmdd}
 
 
+### Informes.
+Para configurar los informes primero tenemos que entrar en el menú de confguración del add-on senaite.impress. En él encontraremos varios campos, de los cuales parametrizamos los siguientes:
+- "Default template: Default.pt" -> para que salga por defecto la plantilla "Default".
+- "Default Paper Format: Landscape" -> para que salga por defecto el informe de manera apaisada.
+- "Default orientation: A4 210.0x297.0 mm" -> dimensiones A4 por defecto.
+- Store Multi-Report PDFs Individually: True" -> para que, al imprimir informes de varias muestras éstos se alamcenen de manera independiente.
+
+Además de esta paremetrización, se realizan los cambios en la plantilla Default.pt, dentro de senaite.impress, tal como se detalla en el documento "Modifications.md".
+
+
 
 
 
