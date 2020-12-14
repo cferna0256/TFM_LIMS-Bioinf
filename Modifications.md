@@ -13,6 +13,7 @@ Para adaptar los informes de resultados generados desde Senaite-LIMS se modifica
 
 - Cambio en "attachments per row = 1" para que salga por defecto un fichero adjunto en cada fila en vez de dos.
 - Añadimos una clase de estilo CSS llamada "break" para que aparezcan los resultados en varias líneas. Esto es necesario par resultados en los que aparece la secuencia de DNA, la cual supera los 300 caracteres.
+```
     <style type="text/css">
       .break {
         width: 30px;
@@ -20,13 +21,16 @@ Para adaptar los informes de resultados generados desde Senaite-LIMS se modifica
         word-break:break-all;
       }
     </style>
-
+```
 - Aplicamos esta clase dentro del campo "Results" del informe:
+```    
     <td class="text-right break">
            <span class="result" tal:content="structure python:model.get_formatted_result(analysis)">23</span>
     </td>
+```
 
 - Modificamos las dimensiones de la tabla de resultados:
+```
         <!-- Analysis in POC and Category -->
             <table class="table table-sm table-condensed">
               <colgroup>
@@ -41,8 +45,10 @@ Para adaptar los informes de resultados generados desde Senaite-LIMS se modifica
                 <!-- Out of Range -->
                 <col style="width: 5%">
               </colgroup>
+```
 
 - Añadimos los campos "Organism" y "Primers" al apartado "Summary" del informe:
+```    
     <tr>      
       <td class="label" i18n:translate="">Organism</td>
           <td tal:content="model/SubGroup/title|nothing"></td>
@@ -51,5 +57,5 @@ Para adaptar los informes de resultados generados desde Senaite-LIMS se modifica
       <td class="label" i18n:translate="">Primers</td>
           <td tal:content="model/SampleCondition/title|nothing"></td>
     </tr>
-
+```
 
