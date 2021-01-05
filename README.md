@@ -8,3 +8,16 @@ En este documento se detallan los pasos seguidos durante la realización del Tra
 - Modifications.md: documento con las modificaciones realizadas en el código de Senaite a través de los módulos senaite.core y senaite.instruments
 - UserManual.md: se detallan los pasos para realizar un flujo de trabajo en Senaite LIMS.
 - FinalReport.pdf: memoria final del TFM.
+
+## Ficheros de configuración modificados:
+- analysisrequest.py
+- Default.pt
+- buildut.cgf
+- requirements.txt
+
+## Ficheros para crear acceso directo:
+- 
+
+## Enlaces importantes:
+- Repositorio Jira: https://fdezmedina-carlos.atlassian.net/jira/software/projects/TFM/boards/1/roadmap
+- Enlace a Google Drive para descargar la Máquina Virutal Oracle con Senaite configurado: https://drive.google.com/drive/folders/1R4N9lD5HV1vQA_PZMpLGBDysUVrqMOne?usp=sharing
