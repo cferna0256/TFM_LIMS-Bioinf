@@ -16,7 +16,9 @@ En este documento se detallan los pasos seguidos durante la realización del Tra
 - requirements.txt
 
 ## Ficheros para crear acceso directo:
-- 
+- senaite_lims_start.sh
+- senaite_logo.png
+- senaitelims.desktop
 
 ## Enlaces importantes:
 - Repositorio Jira: https://fdezmedina-carlos.atlassian.net/jira/software/projects/TFM/boards/1/roadmap
