@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version = 1.0
+Name = Senaite LIMS
+Comment = Senaite LIMS for sequencing Labs by CFM
+Exec = firefox localhost:8080/senaite/login/
+Icon= /home/senaite/senaitelims/desktop/senaite_logo.png
+Terminal = false
+Type = Application
+NoDisplay = false
+
